@@ -442,7 +442,7 @@ po-button {
  * Button Default
  */
 
- :root {
+:root {
   --color-button-background-color: var(--background-color); /* Deprecated v16.x.x utilizar --background-color*/
   --color-button-border: var(--color); /*Deprecated v16.x.x utilizar --color*/
   --color-button-color: var(--color); /*Deprecated v16.x.x utilizar --color*/
@@ -1171,24 +1171,41 @@ po-button {
   --color-stepper-circle-default: var(--color-primary);
   --color-stepper-circle-disabled: var(--color-neutral-light-60);
   --color-stepper-circle-error: var(--color-danger);
+}
 
 /*------------------------------------*\
   SWITCH
 \*------------------------------------*/
 
-  --color-switch-background-color-container-on: var(--color-primary);
-  --color-switch-background-color-container-off: var(--color-neutral-light-80);
-  --color-switch-background-color-container-disabled: var(--color-neutral-light-80);
-  --color-switch-box-shadow-color-focusable: var(--color-primary-dark-20);
+po-switch {
+  --color-unchecked: var(--color-neutral-light-00);
+  --border-color: var(--color-neutral-dark-70);
+  --track-unchecked: var(--color-neutral-light-20);
 
-  --color-switch-background-color-button: var(--color-white);
+  --color-checked: var(--color-action-default);
+  --track-checked: var(--color-brand-01-light);
+
+  --color-unchecked-hover: var(--color-brand-01-lightest);
+  --color-checked-hover: var(--color-action-hover);
+
+  --outline-color-focused: var(--color-action-focus);
+
+  --color-unchecked-disabled: var(--color-neutral-light-20);
+  --color-checked-disabled: var(--color-action-disabled);
+}
+
+:root {
+  --color-switch-background-color-container-on: var(--track-checked);
+  --color-switch-background-color-container-off: var(--track-unchecked);
+  --color-switch-background-color-container-disabled: var(--track-unchecked);
+
+  --color-switch-background-color-button: var(--color-unchecked);
   --color-switch-background-color-button-disabled: var(--color-neutral-light-40);
 
-  --color-switch-color-icon-on: var(--color-primary);
-  --color-switch-color-icon-off: var(--color-neutral-light-80);
-  --color-switch-color-icon-disabled: var(--color-neutral-light-80);
+  --color-switch-color-icon-on: var(--color-neutral-light-00);
+  --color-switch-color-icon-disabled: var(--color-neutral-light-00);
 
-  --color-switch-color-label: var(--color-neutral);
+  --color-switch-color-label: var(--color-neutral-dark-70);
 
 /*------------------------------------*\
   TAB BUTTON
